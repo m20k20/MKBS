@@ -72,29 +72,46 @@ document.addEventListener("DOMContentLoaded", () => {
             loader.style.display = "inline-block";
             formMessage.innerText = "";
 
-            // NOTE: Replace 'YOUR_SERVICE_ID' and 'YOUR_TEMPLATE_ID' with actual EmailJS IDs.
-            emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', contactForm)
-                .then(function (response) {
-                    console.log('SUCCESS!', response.status, response.text);
-                    loader.style.display = "none";
-                    btnText.style.display = "inline-block";
+            // Use FormSubmit to send email without backend/account config
+            const formData = new FormData(contactForm);
 
-                    formMessage.style.color = "var(--primary-color)";
-                    formMessage.innerText = "Thank you! Your appointment request has been sent successfully. We will contact you soon.";
+            // Add custom subject parameter
+            formData.append("_subject", "New Appointment Request from " + formData.get("user_name"));
+            // Set autoresponse (optional) but good for UX
+            formData.append("_autoresponse", "Thank you for your request. We have received your message and will be in touch shortly.");
 
-                    contactForm.reset();
+            fetch("https://formsubmit.co/ajax/mk.beautysaloon20@gmail.com", {
+                method: "POST",
+                headers: {
+                    'Accept': 'application/json'
+                },
+                body: formData
+            })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success === "true" || data.success === true) {
+                        console.log('SUCCESS!', data);
+                        loader.style.display = "none";
+                        btnText.style.display = "inline-block";
 
-                    setTimeout(() => {
-                        formMessage.innerText = "";
-                    }, 5000);
-                }, function (error) {
+                        formMessage.style.color = "var(--primary-color)";
+                        formMessage.innerText = "Thank you! Your appointment request has been sent successfully. We will contact you soon.";
+
+                        contactForm.reset();
+
+                        setTimeout(() => {
+                            formMessage.innerText = "";
+                        }, 5000);
+                    } else {
+                        throw new Error(data.message || "Failed to send message");
+                    }
+                })
+                .catch(error => {
                     console.log('FAILED...', error);
                     loader.style.display = "none";
                     btnText.style.display = "inline-block";
 
                     formMessage.style.color = "red";
-                    // Using generic error here so site visitors don't see detailed configurations problems
-                    // but you can see 'error' in devtools.
                     formMessage.innerText = "Oops! Something went wrong. Please try again later.";
                 });
         });
