@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="MK Beauty Saloon - Modern, elegant, and luxury female beauty saloon offering makeup, hair styling, facial treatments, and elegant Ramadan deals.">
+    <title>MK Beauty Saloon</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">
+                MK <span>Beauty Saloon</span>
+            </a>
+
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About Us</a></li>
+                <li><a href="#prices" class="nav-link">Price List</a></li>
+                <li><a href="#deals" class="nav-link ramadan-link">Ramadan Deals <span class="badge">Offers</span></a>
+                </li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Home Section (Index Page) -->
+    <header id="home" class="hero section">
+        <div class="hero-overlay"></div>
+        <div class="hero-content reveal">
+            <h1 class="headline">Discover Your True <span>Elegance</span></h1>
+            <p class="tagline">Experience luxury beauty treatments tailored just for you in a breathtaking, feminine
+                atmosphere.</p>
+            <a href="#contact" class="btn btn-primary cta-btn">Book Your Appointment</a>
+        </div>
+    </header>
+
+    <!-- About Us Page / Section -->
+    <section id="about" class="about section">
+        <div class="container layout-grid">
+            <div class="about-images reveal-left">
+                <div class="img-wrapper main-img">
+                    <img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?auto=format&fit=crop&w=800&q=80"
+                        alt="Salon Interior" loading="lazy">
+                </div>
+                <div class="img-wrapper sub-img">
+                    <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=600&q=80"
+                        alt="Makeup Services" loading="lazy">
+                </div>
+            </div>
+            <div class="about-text reveal-right">
+                <h2 class="section-title">Welcome to <span>MK Beauty Saloon</span></h2>
+                <h3 class="subtitle">Where Luxury Meets Beauty</h3>
+                <p>Welcome to MK Beauty Saloon, your ultimate destination for high-end female beauty services. We pride
+                    ourselves on creating an ambiance of pure luxury and relaxation, allowing you to unwind while our
+                    expert stylists and estheticians pamper you from head to toe.</p>
+
+                <div class="mission-vision">
+                    <div class="mv-box glow-card">
+                        <h4>Our Mission</h4>
+                        <p>To empower women by enhancing their natural beauty through premium, personalized salon
+                            services in an elegant and relaxing environment.</p>
+                    </div>
+                    <div class="mv-box glow-card">
+                        <h4>Our Vision</h4>
+                        <p>To be the leading luxury beauty destination recognized for exceptional styling,
+                            transformative aesthetic treatments, and unparalleled customer care.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Price List Page / Section -->
+    <section id="prices" class="prices section">
+        <div class="container container-center">
+            <h2 class="section-title text-center reveal">Our <span>Services & Price List</span></h2>
+            <p class="section-desc text-center reveal">Indulge in our categorized premium salon services.</p>
+
+            <div class="price-grid mt-4">
+                <!-- Hair Service Card -->
+                <div class="price-card glow-card reveal-up" style="transition-delay: 0.1s;">
+                    <div class="card-header">
+                        <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=400&q=80"
+                            alt="Hair Styling" class="card-img" />
+                        <div class="card-overlay">
+                            <h3>Hair Styling</h3>
+                        </div>
+                    </div>
+                    <ul class="service-list">
+                        <li><span>Signature Haircut</span> <span>$45</span></li>
+                        <li><span>Blow Dry & Style</span> <span>$30</span></li>
+                        <li><span>Balayage / Highlights</span> <span>$120+</span></li>
+                        <li><span>Keratin Treatment</span> <span>$150</span></li>
+                        <li><span>Luxury Organic Coloring</span> <span>$85</span></li>
+                    </ul>
+                </div>
+
+                <!-- Makeup Service Card -->
+                <div class="price-card glow-card reveal-up" style="transition-delay: 0.2s;">
+                    <div class="card-header">
+                        <img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=400&q=80"
+                            alt="Makeup" class="card-img" />
+                        <div class="card-overlay">
+                            <h3>Makeup Artistry</h3>
+                        </div>
+                    </div>
+                    <ul class="service-list">
+                        <li><span>Soft Glam Makeup</span> <span>$85</span></li>
+                        <li><span>Party Evening Makeup</span> <span>$100</span></li>
+                        <li><span>HD Airbrush Makeup</span> <span>$150</span></li>
+                        <li><span>Lash Extensions</span> <span>$65</span></li>
+                        <li><span>Makeup Trial</span> <span>$50</span></li>
+                    </ul>
+                </div>
+
+                <!-- Facial Service Card -->
+                <div class="price-card glow-card reveal-up" style="transition-delay: 0.3s;">
+                    <div class="card-header">
+                        <img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?auto=format&fit=crop&w=400&q=80"
+                            alt="Facial Treatments" class="card-img" />
+                        <div class="card-overlay">
+                            <h3>Facial Treatments</h3>
+                        </div>
+                    </div>
+                    <ul class="service-list">
+                        <li><span>Express Glow Facial</span> <span>$50</span></li>
+                        <li><span>Deep Cleansing Facial</span> <span>$75</span></li>
+                        <li><span>Anti-Aging Gold Facial</span> <span>$110</span></li>
+                        <li><span>HydraDermabrasion</span> <span>$130</span></li>
+                        <li><span>Chemical Peel</span> <span>$90</span></li>
+                    </ul>
+                </div>
+
+                <!-- Waxing & Body Card -->
+                <div class="price-card glow-card reveal-up" style="transition-delay: 0.4s;">
+                    <div class="card-header">
+                        <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?auto=format&fit=crop&w=400&q=80"
+                            alt="Waxing" class="card-img" />
+                        <div class="card-overlay">
+                            <h3>Waxing & Body</h3>
+                        </div>
+                    </div>
+                    <ul class="service-list">
+                        <li><span>Eyebrow Threading</span> <span>$15</span></li>
+                        <li><span>Full Face Wax</span> <span>$40</span></li>
+                        <li><span>Half Arms/Legs</span> <span>$35</span></li>
+                        <li><span>Full Body Sugar Wax</span> <span>$120</span></li>
+                        <li><span>Bikini Line</span> <span>$30</span></li>
+                    </ul>
+                </div>
+
+                <!-- Bridal Card -->
+                <div class="price-card glow-card reveal-up" style="transition-delay: 0.5s;">
+                    <div class="card-header">
+                        <img src="images/bridal.png" alt="Bridal Services" class="card-img" />
+                        <div class="card-overlay">
+                            <h3>Bridal Packages</h3>
+                        </div>
+                    </div>
+                    <ul class="service-list">
+                        <li><span>Pre-Bridal Grooming</span> <span>$250</span></li>
+                        <li><span>Bridal Hair & Makeup</span> <span>$350</span></li>
+                        <li><span>Bridesmaid Package</span> <span>$150/pp</span></li>
+                        <li><span>Bridal Draping & Styling</span> <span>$60</span></li>
+                        <li><span>Floral Accessories</span> <span>$40+</span></li>
+                    </ul>
+                </div>
+
+                <!-- Mehndi Design Card -->
+                <div class="price-card glow-card reveal-up" style="transition-delay: 0.6s;">
+                    <div class="card-header">
+                        <img src="images/mehndi.png" alt="Mehndi & Henna" class="card-img" />
+                        <div class="card-overlay">
+                            <h3>Mehndi Designs</h3>
+                        </div>
+                    </div>
+                    <ul class="service-list">
+                        <li><span>Bridal Mehndi (Hands & Legs)</span> <span>$150</span></li>
+                        <li><span>Intricate Indian Design</span> <span>$50</span></li>
+                        <li><span>Modern Arabic Design</span> <span>$35</span></li>
+                        <li><span>Guest Henna Hourly Rate</span> <span>$100/hr</span></li>
+                        <li><span>Organic Jagua/Henna</span> <span>+$20</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ramadan Deals Page / Section -->
+    <section id="deals" class="deals section">
+        <div class="container">
+            <div class="deals-header text-center reveal">
+                <span class="badge big-badge">Limited Time Offer</span>
+                <h2 class="section-title text-center">Exclusive <span>Ramadan Deals</span></h2>
+                <p class="section-desc text-center">Celebrate the holy month with our elegant festive beauty bundles and
+                    shine brighter.</p>
+            </div>
+
+            <div class="deals-grid layout-grid mt-4">
+                <div class="deal-card glowing-border reveal-left">
+                    <div class="deal-content">
+                        <div class="deal-icon">🌙</div>
+                      
+                        <div class="discount-badge">Deal - 1</div>
+                        <p class="deal-desc">Face Polish, Eyebrows, Upperlip & Forehead</p>
+                        <div class="price-row">
+                            <span class="old-price">1,300</span>
+                            <span class="new-price">1,000</span>
+                        </div>
+                        <a href="#contact" class="btn btn-outline">Claim Offer</a>
+                    </div>
+                </div>
+
+                <div class="deal-card glowing-border reveal-up">
+                    <div class="deal-content">
+                        <div class="deal-icon">✨</div>
+                       
+                        <div class="discount-badge">Deal - 2</div>
+                        <p class="deal-desc">Face Wax, Whitening Bleach, Eyebrows & Upperlip</p>
+                        <div class="price-row">
+                            <span class="old-price">1,800</span>
+                            <span class="new-price">1,500</span>
+                        </div>
+                        <a href="#contact" class="btn btn-outline">Claim Offer</a>
+                    </div>
+                </div>
+
+                <div class="deal-card glowing-border reveal-right">
+                    <div class="deal-content">
+                        <div class="deal-icon">💄</div>
+                      
+                        <div class="discount-badge">Deal - 3</div>
+                        <p class="deal-desc">Whitening Facial, Whitening Bleach, Eyebrows & Upperlip</p>
+                        <div class="price-row">
+                            <span class="old-price">2,200</span>
+                            <span class="new-price">1,800</span>
+                        </div>
+                        <a href="#contact" class="btn btn-outline">Claim Offer</a>
+                    </div>
+                </div>
+
+                <div class="deal-card glowing-border reveal-left">
+                    <div class="deal-content">
+                        <div class="deal-icon">💅</div>
+                       
+                        <div class="discount-badge">Deal - 4</div>
+                        <p class="deal-desc">Skin Tightening Facial, Whitening Bleach, Eyebrows & Upperlip</p>
+                        <div class="price-row">
+                            <span class="old-price">3,000</span>
+                            <span class="new-price">2,500</span>
+                        </div>
+                        <a href="#contact" class="btn btn-outline">Claim Offer</a>
+                    </div>
+                </div>
+
+                <div class="deal-card glowing-border reveal-up">
+                    <div class="deal-content">
+                        <div class="deal-icon">💆‍♀️</div>
+                       
+                        <div class="discount-badge">Deal - 5</div>
+                        <p class="deal-desc">Gold Facial, Gold Bleach, Half Hand Wax, Eyebrows & Upperlip</p>
+                        <div class="price-row">
+                            <span class="old-price">3,000</span>
+                            <span class="new-price">2,500</span>
+                        </div>
+                        <a href="#contact" class="btn btn-outline">Claim Offer</a>
+                    </div>
+                </div>
+
+                <div class="deal-card glowing-border reveal-right">
+                    <div class="deal-content">
+                        <div class="deal-icon">💇‍♀️</div>
+                  
+                        <div class="discount-badge">Deal - 6</div>
+                        <p class="deal-desc">Face Wax, Under Arms Wax, Half Arms & Half Legs Wax</p>
+                        <div class="price-row">
+                            <span class="old-price">2,500</span>
+                            <span class="new-price">2,000</span>
+                        </div>
+                        <a href="#contact" class="btn btn-outline">Claim Offer</a>
+                    </div>
+                </div>
+
+                <div class="deal-card glowing-border reveal-left">
+                    <div class="deal-content">
+                        <div class="deal-icon">🌸</div>
+                      
+                        <div class="discount-badge">Deal - 7</div>
+                        <p class="deal-desc">Face Wax, Face Mask, Eyebrows</p>
+                        <div class="price-row">
+                            <span class="old-price">1,300</span>
+                            <span class="new-price">1,000</span>
+                        </div>
+                        <a href="#contact" class="btn btn-outline">Claim Offer</a>
+                    </div>
+                </div>
+
+                <div class="deal-card glowing-border reveal-up">
+                    <div class="deal-content">
+                        <div class="deal-icon">🎨</div>
+                    
+                        <div class="discount-badge">Deal - 8</div>
+                        <p class="deal-desc">Highlights / Lowlights, Balayage, Ombre, Chunks (till Mid Length)</p>
+                        <div class="price-row">
+                            <span class="old-price">10,000</span>
+                            <span class="new-price">8,000</span>
+                        </div>
+                        <a href="#contact" class="btn btn-outline">Claim Offer</a>
+                    </div>
+                </div>
+
+                <div class="deal-card glowing-border reveal-right">
+                    <div class="deal-content">
+                        <div class="deal-icon">👑</div>
+                      
+                        <div class="discount-badge">Deal - 9</div>
+                        <p class="deal-desc">Rebounding / Keratin Treatment, Xtenso Kerabond (till Mid Length)</p>
+                        <div class="price-row">
+                            <span class="old-price">13,000</span>
+                            <span class="new-price">10,000</span>
+                        </div>
+                        <a href="#contact" class="btn btn-outline">Claim Offer</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Page / Section -->
+    <section id="contact" class="contact section">
+        <div class="container layout-grid align-start">
+            <div class="contact-info reveal-left">
+                <h2 class="section-title">Get In <span>Touch</span></h2>
+                <p class="contact-desc">Ready for your transformation? Book an appointment or reach out with any
+                    questions. We are excited to welcome you!</p>
+                <br>
+                <ul class="contact-details">
+                    <li>
+                        <span class="icon">📍</span>
+                        <p>opp. Imtiaz Super Store, Qayyumabad, Karachi</p>
+                    </li>
+                    <li>
+                        <span class="icon">📞</span>
+                        <p>+92 xxx xxx xxxx</p>
+                    </li>
+                    <li>
+                        <span class="icon">✉️</span>
+                        <p>mk.beautysaloon20@gmail.com</p>
+                    </li>
+                </ul>
+
+                <div class="social-icons">
+                    <a href="#" class="social-btn">FB</a>
+                    <a href="#" class="social-btn">IG</a>
+                    <a href="#" class="social-btn">TW</a>
+                    <a href="#" class="social-btn">YT</a>
+                </div>
+            </div>
+
+            <div class="contact-form-container glow-card reveal-right">
+                <form id="contactForm" class="contact-form">
+                    <div class="input-group">
+                        <input type="text" id="name" required placeholder=" ">
+                        <label for="name">Your Name</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="tel" id="phone" required placeholder=" ">
+                        <label for="phone">Phone Number</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="email" id="email" required placeholder=" ">
+                        <label for="email">Email Address</label>
+                    </div>
+                    <div class="input-group">
+                        <select id="service" required>
+                            <option value="" disabled selected>Select a Service</option>
+                            <option value="hair">Hair Styling</option>
+                            <option value="makeup">Makeup Artistry</option>
+                            <option value="facial">Facial Treatments</option>
+                            <option value="waxing">Waxing & Body</option>
+                            <option value="bridal">Bridal Package</option>
+                            <option value="ramadan">Ramadan Deal</option>
+                            <option value="other">Other Inquiry</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <textarea id="message" rows="4" required placeholder=" "></textarea>
+                        <label for="message">Your Message</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary submit-btn">
+                        <span>Send Message / Book</span>
+                        <div class="loader"></div>
+                    </button>
+                    <div id="formMessage" class="form-message"></div>
+                </form>
+            </div>
+
+        </div>
+
+        <!-- Google Maps iframe -->
+        <div class="map-container reveal-up mt-5">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.213264424915!2d-73.98773138459422!3d40.75889497932644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25855c64a1ba5%3A0x6a0536423cc99496!2sTimes%20Square!5e0!3m2!1sen!2sus!4v1680182441014!5m2!1sen!2sus"
+                width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h2>MK <span>Beauty Saloon</span></h2>
+                    <p>Elevating female beauty with premium services and a luxury saloon experience.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#prices">Price List</a></li>
+                        <li><a href="#deals">Ramadan Deals</a></li>
+                    </ul>
+                </div>
+                <div class="footer-hours">
+                    <h4>Opening Hours</h4>
+                    <ul>
+                        <li>Sat - Thurs: 10:00 AM - 8:00 PM</li>
+                        <li>Friday: 04:00 PM - 10:00 PM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 MK Beauty Saloon. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>
