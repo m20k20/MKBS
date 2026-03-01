@@ -383,19 +383,19 @@
             <div class="contact-form-container glow-card reveal-right">
                 <form id="contactForm" class="contact-form">
                     <div class="input-group">
-                        <input type="text" id="name" required placeholder=" ">
+                        <input type="text" id="name" name="user_name" required placeholder=" ">
                         <label for="name">Your Name</label>
                     </div>
                     <div class="input-group">
-                        <input type="tel" id="phone" required placeholder=" ">
+                        <input type="tel" id="phone" name="user_phone" required placeholder=" ">
                         <label for="phone">Phone Number</label>
                     </div>
                     <div class="input-group">
-                        <input type="email" id="email" required placeholder=" ">
+                        <input type="email" id="email" name="user_email" required placeholder=" ">
                         <label for="email">Email Address</label>
                     </div>
                     <div class="input-group">
-                        <select id="service" required>
+                        <select id="service" name="user_service" required>
                             <option value="" disabled selected>Select a Service</option>
                             <option value="hair">Hair Styling</option>
                             <option value="makeup">Makeup Artistry</option>
@@ -407,7 +407,7 @@
                         </select>
                     </div>
                     <div class="input-group">
-                        <textarea id="message" rows="4" required placeholder=" "></textarea>
+                        <textarea id="message" name="message" rows="4" required placeholder=" "></textarea>
                         <label for="message">Your Message</label>
                     </div>
                     <button type="submit" class="btn btn-primary submit-btn">
@@ -423,7 +423,7 @@
         <!-- Google Maps iframe -->
         <div class="map-container reveal-up mt-5">
             <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.213264424915!2d-73.98773138459422!3d40.75889497932644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25855c64a1ba5%3A0x6a0536423cc99496!2sTimes%20Square!5e0!3m2!1sen!2sus!4v1680182441014!5m2!1sen!2sus"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14484.1855425454!2d67.07151388868789!3d24.828087271728453!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33c6ffa24d363%3A0xd4f6e17a243d0167!2sQayyumabad%2C%20Karachi%2C%20Pakistan!5e0!3m2!1sen!2s!4v1772397326829!5m2!1sen!2s"
                 width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade">
             </iframe>
@@ -460,6 +460,16 @@
             </div>
         </div>
     </footer>
+
+    <!-- EmailJS Library -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            // Initialize EmailJS with your public key.
+            // Note: Replace "YOUR_PUBLIC_KEY" with your actual EmailJS public key.
+            emailjs.init("YOUR_PUBLIC_KEY");
+        })();
+    </script>
 
     <!-- Custom JavaScript -->
     <script src="js/script.js"></script>

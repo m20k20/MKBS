@@ -1,7 +1,7 @@
 // MK Beauty Saloon - Main Script
 
 document.addEventListener("DOMContentLoaded", () => {
-    
+
     /* --- Mobile Navigation Toggle --- */
     const hamburger = document.getElementById("hamburger");
     const navLinks = document.getElementById("nav-links");
@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     hamburger.addEventListener("click", () => {
         navLinks.classList.toggle("active");
-        
+
         // Toggle hamburger animation
         hamburger.classList.toggle("toggle");
     });
@@ -36,13 +36,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     /* --- Scroll Reveal Animations (Intersection Observer) --- */
     const reveals = document.querySelectorAll(".reveal, .reveal-left, .reveal-right, .reveal-up");
-    
+
     const revealOptions = {
         threshold: 0.15,
         rootMargin: "0px 0px -50px 0px"
     };
 
-    const revealOnScroll = new IntersectionObserver(function(entries, observer) {
+    const revealOnScroll = new IntersectionObserver(function (entries, observer) {
         entries.forEach(entry => {
             if (!entry.isIntersecting) {
                 return;
@@ -68,27 +68,35 @@ document.addEventListener("DOMContentLoaded", () => {
         contactForm.addEventListener("submit", (e) => {
             e.preventDefault();
 
-            // Simulate form submission
             btnText.style.display = "none";
             loader.style.display = "inline-block";
             formMessage.innerText = "";
-            
-            setTimeout(() => {
-                // Success message
-                loader.style.display = "none";
-                btnText.style.display = "inline-block";
-                
-                formMessage.style.color = "var(--primary-color)";
-                formMessage.innerText = "Thank you! Your appointment request has been sent successfully. We will contact you soon.";
-                
-                contactForm.reset();
 
-                // Clear message after 5 seconds
-                setTimeout(() => {
-                    formMessage.innerText = "";
-                }, 5000);
+            // NOTE: Replace 'YOUR_SERVICE_ID' and 'YOUR_TEMPLATE_ID' with actual EmailJS IDs.
+            emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', contactForm)
+                .then(function (response) {
+                    console.log('SUCCESS!', response.status, response.text);
+                    loader.style.display = "none";
+                    btnText.style.display = "inline-block";
 
-            }, 2000);
+                    formMessage.style.color = "var(--primary-color)";
+                    formMessage.innerText = "Thank you! Your appointment request has been sent successfully. We will contact you soon.";
+
+                    contactForm.reset();
+
+                    setTimeout(() => {
+                        formMessage.innerText = "";
+                    }, 5000);
+                }, function (error) {
+                    console.log('FAILED...', error);
+                    loader.style.display = "none";
+                    btnText.style.display = "inline-block";
+
+                    formMessage.style.color = "red";
+                    // Using generic error here so site visitors don't see detailed configurations problems
+                    // but you can see 'error' in devtools.
+                    formMessage.innerText = "Oops! Something went wrong. Please try again later.";
+                });
         });
     }
 

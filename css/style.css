@@ -217,6 +217,10 @@ span {
     z-index: 1;
 }
 
+.btn span {
+    color: inherit;
+}
+
 .btn-primary {
     background: var(--primary-color);
     color: #fff;
